@@ -67,12 +67,12 @@ const PortfolioNavbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full top-0 z-50 transition-all duration-300 ${
+    <nav className={`field-sizing-fixed w-full top-0 z-50 transition-all duration-300 ${
       scrolled 
         ? 'bg-white/10 backdrop-blur-lg shadow-lg shadow-purple-500/10' 
         : 'bg-transparent'
     }`}>
-      <div className="max-w-7xl mx-auto py-4 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto py-2 px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
 
           {/* Logo/Brand */}

@@ -25,7 +25,7 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="w-full py-20 bg-gradient-to-b from-white to-slate-100 dark:from-[#0d1117] dark:to-[#0d1117] transition-colors">
       <div className="max-w-7xl mx-auto px-6 text-center">
-        <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-14">
+        <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-14 pb-2">
           My Skills
         </h2>
 

@@ -5,8 +5,8 @@ const AboutSection = () => {
         {/* Image Section */}
         <div className="w-full md:w-1/2">
           <img
-            src="/devpic.jpg" // Place this image inside public/
-            alt="Female Web Developer"
+            src="/profile.jpg" // Place this image inside public/
+            alt="Web Developer"
             className="rounded-2xl shadow-xl object-cover w-full h-[400px]"
           />
         </div>
