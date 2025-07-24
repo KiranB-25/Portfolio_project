@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { FaCode, FaServer, FaPaintBrush, FaRocket } from "react-icons/fa";
 
-
 const cardVariants = {
   offscreen: {
     opacity: 0,
@@ -50,9 +49,13 @@ const ExperienceSection = () => {
   return (
     <section
       id="experience"
-      className="w-full py-20 bg-gray-100 dark:bg-[#0d1117] transition-colors"
+      className="relative w-full py-20 overflow-hidden bg-gradient-to-br from-[#fdfbfb] to-[#ebedee] dark:from-[#0d1117] dark:to-[#0d1117]"
     >
-      <div className="container mx-auto px-6 md:px-12 lg:px-20 text-center">
+      {/* Glowing Background Elements */}
+      <div className="absolute top-[-100px] left-[-80px] w-[400px] h-[400px] bg-gradient-to-tr from-purple-400 via-pink-400 to-blue-400 opacity-20 rounded-full blur-3xl animate-pulse z-0" />
+      <div className="absolute bottom-[-100px] right-[-100px] w-[350px] h-[350px] bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 opacity-20 rounded-full blur-2xl animate-ping z-0" />
+
+      <div className="relative container mx-auto px-6 md:px-12 lg:px-20 text-center z-10">
         <h2 className="text-4xl font-bold mb-12 text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 pb-2">
           My Experience
         </h2>

@@ -1,3 +1,4 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import PortfolioNavbar from "./components/custom components/Navbar";
 import { ThemeProvider } from "@/components/theme-provider";
 import HeroSection from "./components/custom components/Herosection";
@@ -8,18 +9,31 @@ import ExperienceSection from "./components/custom components/ExperienceSection"
 import ProjectsSection from "./components/custom components/ProjectSection";
 import ContactSection from "./components/custom components/ContactSection";
 
+const Home = () => {
+  return (
+    <>
+      <PortfolioNavbar />
+      <HeroSection />
+      <AboutSection />
+      <SkillsSection />
+      <ExperienceSection />
+      <ProjectsSection />
+      <ContactSection />
+      <Footer />
+    </>
+  );
+};
+
+
 function App() {
   return (
     <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
-      <PortfolioNavbar />
-      <HeroSection/> 
-      <AboutSection/> 
-      <SkillsSection/> 
-      <ExperienceSection/>
-      <ProjectsSection/>
-      <ContactSection/>
-      <Footer/> 
-      {/* applying dark theme */}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<AboutSection />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   );
 }

@@ -23,8 +23,15 @@ const skills = [
 
 const SkillsSection = () => {
   return (
-    <section id="skills" className="w-full py-20 bg-gradient-to-b from-white to-slate-100 dark:from-[#0d1117] dark:to-[#0d1117] transition-colors">
-      <div className="max-w-7xl mx-auto px-6 text-center">
+    <section
+      id="skills"
+      className="relative w-full py-20 overflow-hidden bg-gradient-to-br from-[#fdfbfb] to-[#ebedee] dark:from-[#0d1117] dark:to-[#0d1117]"
+    >
+      {/* Glowing background blobs */}
+      <div className="absolute top-[-100px] left-[-80px] w-[400px] h-[400px] bg-gradient-to-tr from-purple-400 via-pink-400 to-blue-400 opacity-20 rounded-full blur-3xl animate-pulse z-0" />
+      <div className="absolute bottom-[-100px] right-[-100px] w-[350px] h-[350px] bg-gradient-to-br from-pink-400 via-purple-400 to-blue-400 opacity-20 rounded-full blur-2xl animate-ping z-0" />
+
+      <div className="relative max-w-7xl mx-auto px-6 text-center z-10">
         <h2 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-600 mb-14 pb-2">
           My Skills
         </h2>
@@ -33,7 +40,7 @@ const SkillsSection = () => {
           {skills.map((skill, index) => (
             <div
               key={index}
-              className="group [perspective:1000px] h-80 w-full" // increased height here
+              className="group [perspective:1000px] h-80 w-full"
             >
               <div className="relative h-full w-full transition-transform duration-700 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
                 {/* Front Side */}

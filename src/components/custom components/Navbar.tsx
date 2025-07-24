@@ -1,5 +1,6 @@
 import  { useState, useEffect } from 'react';
 import { ModeToggle } from "../mode-toggle";
+
 // SVG Icons Components
 const MenuIcon = () => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -35,13 +36,26 @@ const MailIcon = () => (
   </svg>
 );
 
-const DownloadIcon = () => (
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-    <polyline points="7,10 12,15 17,10"></polyline>
-    <line x1="12" y1="15" x2="12" y2="3"></line>
+
+const DownloadIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg
+    {...props}
+    width="16"
+    height="16"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="2"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    className={`text-current ${props.className || ""}`} // ensures Tailwind classes apply
+  >
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7,10 12,15 17,10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
   </svg>
 );
+
 
 const PortfolioNavbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -59,12 +73,27 @@ const PortfolioNavbar = () => {
 
   const navItems = [
     { name: 'Home', href: '#home' },
-    { name: 'About', href: '#about' },
+    { name: 'About', href: '#about', },
     { name: 'Skills', href: '#skills' },
     { name: 'Projects', href: '#projects' },
     { name: 'Experience', href: '#experience' },
     { name: 'Contact', href: '#contact' }
   ];
+
+    const handleViewAndDownload = () => {
+    const resumeUrl = "/images/Syeda_Kiran_Bukhari_Resume.pdf";
+
+    // Trigger Download
+    const link = document.createElement("a");
+    link.href = resumeUrl;
+    link.download = "Syeda_Kiran_Bukhari_Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    // Open in same tab (preview)
+     window.location.href = resumeUrl;
+};
 
   return (
     <nav className={`field-sizing-fixed w-full top-0 z-50 transition-all duration-300 ${
@@ -138,13 +167,13 @@ const PortfolioNavbar = () => {
             </div>
 
             {/* CTA Button */}
-            <button className="relative group ml-4">
+            <button onClick={handleViewAndDownload} className="relative group ml-4">
               <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 rounded-lg blur opacity-60 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-pulse"></div>
               <div className="relative px-6 py-2 bg-black rounded-lg leading-none flex items-center space-x-2">
                 <span className="text-white group-hover:text-gray-100 transition duration-200">
                   Resume
                 </span>
-                <DownloadIcon />
+                <DownloadIcon className="w-4 h-4 text-white" />
               </div>
             </button>
           </div>
@@ -184,7 +213,7 @@ const PortfolioNavbar = () => {
             {/* Mobile Social Links */}
             <div className="flex items-center justify-center space-x-6 pt-4 pb-2">
               <a 
-                href="https://github.com" 
+                href="https://github.com/KiranB-25" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
@@ -192,7 +221,7 @@ const PortfolioNavbar = () => {
                 <GithubIcon />
               </a>
               <a 
-                href="https://linkedin.com" 
+                href="https://www.linkedin.com/in/kiran-bukhari-b967742b9?" 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-all duration-300 transform hover:scale-110"
@@ -211,7 +240,7 @@ const PortfolioNavbar = () => {
 
             {/* Mobile CTA Button */}
             <div className="px-4 pt-2">
-              <button className="w-full relative group">
+              <button onClick={handleViewAndDownload} className="w-full relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-r from-pink-600 via-purple-600 to-blue-600 rounded-lg blur opacity-60 group-hover:opacity-100 transition duration-1000"></div>
                 <div className="relative w-full px-6 py-3 bg-black rounded-lg flex items-center justify-center space-x-2">
                   <span className="text-white">Download Resume</span>
