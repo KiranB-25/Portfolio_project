@@ -47,7 +47,7 @@ export default function HeroSection() {
               className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-semibold py-2 px-6 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
               onClick={() => window.open("https://calendly.com/kiranbukhari588/discuss-your-project-with-kiran", "_blank")} // 🔁 Replace link
             >
-              Book a Meeting With Kiran
+              Schedule Meeting With Me
             </button>
           </div>
         </div>
