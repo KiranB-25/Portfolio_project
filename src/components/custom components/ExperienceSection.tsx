@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { FaCode, FaServer, FaPaintBrush, FaRocket } from "react-icons/fa";
 
+
 const cardVariants = {
   offscreen: {
     opacity: 0,

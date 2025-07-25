@@ -24,10 +24,12 @@ const Footer = () => {
             Quick Links
           </h3>
           <ul className="space-y-2 text-white text-opacity-90">
+            <li><a href="#home" className="hover:underline">Home</a></li>
             <li><a href="#about" className="hover:underline">About</a></li>
             <li><a href="#skills" className="hover:underline">Skills</a></li>
             <li><a href="#experience" className="hover:underline">Experience</a></li>
             <li><a href="#contact" className="hover:underline">Contact</a></li>
+            <li><a href="#projects" className="hover:underline">Projects</a></li>
           </ul>
         </div>
 
@@ -37,7 +39,7 @@ const Footer = () => {
             Connect with Me
           </h3>
           <div className="flex justify-center md:justify-start space-x-6 text-2xl text-white">
-            <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-yellow-200">
+            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-yellow-200">
               <FaGithub />
             </a>
             <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-yellow-200">

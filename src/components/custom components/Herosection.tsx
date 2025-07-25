@@ -1,14 +1,17 @@
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 
+
 const images = [
   "/purple.jpg",
   "/pen.jpg",
   "/koituhai.jpg",
   "/pen.jpg",
 ]
+
 export default function HeroSection() {
   const [currentImage, setCurrentImage] = useState(0)
+  
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -29,11 +32,22 @@ export default function HeroSection() {
             A passionate and results-driven <strong>Web Developer</strong> specializing in modern web technologies including React, JavaScript, Tailwind CSS, and responsive UI/UX. I love building elegant, accessible, and performant web applications.
           </p>
           <div className="mt-8 flex gap-4">
-            <button className="bg-gradient-to-r from-pink-500 to-blue-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:scale-105 transition-transform duration-300">
+            <button
+              className="bg-gradient-to-r from-pink-500 to-blue-500 text-white font-semibold py-2 px-6 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
+              onClick={() => {
+              const projectSection = document.getElementById("projects");
+            if (projectSection) {
+            projectSection.scrollIntoView({ behavior: "smooth" });
+         }
+       }}
+            >
               Explore My Work
             </button>
-            <button className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-semibold py-2 px-6 rounded-full shadow-md hover:scale-105 transition-transform duration-300">
-              Contact Me
+            <button
+              className="bg-gray-100 dark:bg-gray-800 text-gray-800 dark:text-gray-200 font-semibold py-2 px-6 rounded-full shadow-md hover:scale-105 transition-transform duration-300"
+              onClick={() => window.open("https://calendly.com/kiranbukhari588/discuss-your-project-with-kiran", "_blank")} // 🔁 Replace link
+            >
+              Book a Meeting With Kiran
             </button>
           </div>
         </div>
