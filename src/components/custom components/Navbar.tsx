@@ -82,7 +82,7 @@ const PortfolioNavbar = () => {
   ];
 
     const handleViewAndDownload = () => {
-    const resumeUrl = "/images/syeda kiran bukhari.pdf";
+    const resumeUrl = "\syeda kiran bukahri.pdf";
 
     // Trigger Download
     const link = document.createElement("a");
