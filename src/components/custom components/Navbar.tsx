@@ -82,12 +82,12 @@ const PortfolioNavbar = () => {
   ];
 
     const handleViewAndDownload = () => {
-    const resumeUrl = "/images/Syeda_Kiran_Bukhari_Resume.pdf";
+    const resumeUrl = "/images/syeda kiran bukhari.pdf";
 
     // Trigger Download
     const link = document.createElement("a");
     link.href = resumeUrl;
-    link.download = "Syeda_Kiran_Bukhari_Resume.pdf";
+    link.download = "syeda kiran bukhari.pdf";
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);

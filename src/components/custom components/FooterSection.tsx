@@ -39,10 +39,10 @@ const Footer = () => {
             Connect with Me
           </h3>
           <div className="flex justify-center md:justify-start space-x-6 text-2xl text-white">
-            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-yellow-200">
+            <a href="https://github.com/KiranB-25" target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-yellow-200">
               <FaGithub />
             </a>
-            <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-yellow-200">
+            <a href="https://www.linkedin.com/in/kiran-bukhari-b967742b9?" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-yellow-200">
               <FaLinkedin />
             </a>
             <a href="mailto:youremail@example.com" aria-label="Email" className="hover:text-yellow-200">
