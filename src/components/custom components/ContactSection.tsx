@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -71,7 +73,7 @@ const ContactSection: React.FC = () => {
           viewport={{ once: true }}
           className="backdrop-blur-md bg-white/10 dark:bg-white/5 border border-gradient-to-r from-purple-500 to-pink-500 rounded-2xl p-8 shadow-xl space-y-6"
         >
-          <input type="hidden" name="access_key" value={import.meta.env.VITE_WEB3FORMS_ACCESS_KEY} />
+          <input type="hidden" name="access_key" value={process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY} />
           <input type="hidden" name="from_name" value="Portfolio Contact Form" />
           <input type="hidden" name="subject" value="New Contact Message" />
           <input type="hidden" name="replyto" value="email" />
